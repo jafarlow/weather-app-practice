@@ -47,8 +47,8 @@ function App() {
               <p className="date">{dateBuilder(new Date())}</p>
             </div>
             <div className="weather-box">
-              <p className="temp">15C</p>
-              <p className="weather">SUNNY</p>
+              <p className="temp">{Math.round(weather.main.temp)}&#8451;</p>
+              <p className="weather">{weather.weather[0].main}</p>
             </div>
           </div>
         ) : ("")}
