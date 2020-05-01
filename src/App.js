@@ -40,14 +40,18 @@ function App() {
         <div className="search">
           <input type="text" className="searchbar" onChange={e => setQuery(e.target.value)} value={query} onKeyPress={search}/>
         </div>
-        <div className="location-box">
-          <p className="location">Boston, US</p>
-          <p className="date">{dateBuilder(new Date())}</p>
-        </div>
-        <div className="weather-box">
-          <p className="temp">15C</p>
-          <p className="weather">SUNNY</p>
-        </div>
+        {(typeof weather.main != "undefined") ? (
+          <div>
+            <div className="location-box">
+              <p className="location">{weather.name}, {weather.sys.country}</p>
+              <p className="date">{dateBuilder(new Date())}</p>
+            </div>
+            <div className="weather-box">
+              <p className="temp">15C</p>
+              <p className="weather">SUNNY</p>
+            </div>
+          </div>
+        ) : ("")}
       </main>
     </div>
   );
