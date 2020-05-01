@@ -1,0 +1,40 @@
+main {
+  max-width: 50.25rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search {
+  width: 85%;
+
+  .searchbar {
+    width: 100%;
+    line-height: 2rem;
+  }
+}
+
+article {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location {
+  font-size: 1.5rem;
+}
+
+.weather-box {
+  width: 20rem;
+  text-align: center;
+  border: 0.25rem solid black;
+  border-radius: 2rem;
+
+  .temp {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
