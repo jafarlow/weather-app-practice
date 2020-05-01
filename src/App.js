@@ -14,7 +14,10 @@ function App() {
     if (event.key === "Enter") {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then(res => res.json())
-        .then(result => setweather(result))
+        .then(result => {
+          setweather(result)
+          setQuery('')
+        })
     }
   }
 
@@ -35,7 +38,7 @@ function App() {
     <div className="App">
       <main>
         <div className="search">
-          <input type="text" className="searchbar" />
+          <input type="text" className="searchbar" onChange={e => setQuery(e.target.value)} value={query} onKeyPress={search}/>
         </div>
         <div className="location-box">
           <p className="location">Boston, US</p>
