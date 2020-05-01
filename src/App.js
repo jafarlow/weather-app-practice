@@ -27,8 +27,8 @@ function App() {
           <input type="text" className="searchbar" />
         </div>
         <div className="location-box">
-          <div className="location">Boston, US</div>
-          <div className="data">{dateBuilder(new Date())}</div>
+          <p className="location">Boston, US</p>
+          <p className="date">{dateBuilder(new Date())}</p>
         </div>
         <div className="weather-box">
           <p className="temp">15C</p>
