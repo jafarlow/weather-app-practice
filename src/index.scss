@@ -1,3 +1,12 @@
+.App {
+  // negative margin to remove wrapping whitespace
+  margin: -0.5rem;
+  height: 100vh;
+  background-image: url(./images/default.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 main {
   max-width: 50.25rem;
   margin: 0 auto;
