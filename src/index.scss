@@ -1,3 +1,5 @@
+// NOTE: capitalized class names are based on API generated content
+
 .App {
   // negative margin to remove wrapping whitespace
   margin: -0.5rem;
@@ -6,9 +8,89 @@
   background-size: cover;
 }
 
-.default {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)), url(./images/default.jpg);
+@mixin background-image($url) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)), url($url);
 }
+
+// variable background images
+
+.default {
+  @include background-image("./images/default.jpg");
+}
+
+.Clear-cold {
+  @include background-image("./images/sunny-cold.png");
+}
+
+.Clear-cool {
+  @include background-image("./images/sunny-cool.jpg");
+}
+
+.Clear-hot {
+  @include background-image("./images/sunny-hot.jpg");
+}
+
+.Clear-warm {
+  @include background-image("./images/sunny-warm.jpg");
+}
+
+.Clouds-cold {
+  @include background-image("./images/cloudy-cold.jpg");
+}
+
+.Clouds-cool {
+  @include background-image("./images/cloudy-cool.jpg");
+}
+
+.Clouds-warm {
+  @include background-image("./images/cloudy-warm.jpg");
+}
+
+.Fog-cold, .Fog-cool {
+  @include background-image("./images/foggy-cold.jpg");
+}
+
+.Fog-warm {
+  @include background-image("./images/foggy-warm.jpg");
+}
+
+.Haze-cold, .Haze-cool {
+  @include background-image("./images/hazy-cool.jpg");
+}
+
+.Haze-hot {
+  @include background-image("./images/hazy-hot.jpg");
+}
+
+.Haze-warm {
+  @include background-image("./images/hazy-warm.jpg");
+}
+
+.Mist-cold, .Mist-cool {
+  @include background-image("./images/misty-cool.jpg");
+}
+
+.Mist-warm, .Mist-hot {
+  @include background-image("./images/misty-warm.jpg");
+}
+
+.Rain-cold, .Drizzle-cold {
+  @include background-image("./images/rainy-cold.jpg");
+}
+
+.Rain-warm, .Drizzle-warm {
+  @include background-image("./images/rainy-warm.jpg");
+}
+
+.Snow-cold, .Snow-cool {
+  @include background-image("./images/snowy.jpg");
+}
+
+.Thunderstorm-hot, .Thunderstorm-warm {
+  @include background-image("./images/thunderstorm-hot.jpg");
+}
+
+// primary CSS
 
 main {
   max-width: 50.25rem;
