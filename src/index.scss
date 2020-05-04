@@ -42,6 +42,10 @@
   @include background-image("./images/cloudy-cool.jpg");
 }
 
+.Clouds-hot {
+  @include background-image("./images/cloudy-hot.jpg");
+}
+
 .Clouds-warm {
   @include background-image("./images/cloudy-warm.jpg");
 }
@@ -90,8 +94,12 @@
   @include background-image("./images/snowy.jpg");
 }
 
-.Thunderstorm-hot, .Thunderstorm-warm {
+.Thunderstorm-hot {
   @include background-image("./images/thunderstorm-hot.jpg");
+}
+
+.Thunderstorm-warm {
+  @include background-image("./images/thunderstorm-warm.jpg");
 }
 
 // primary CSS
