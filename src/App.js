@@ -21,6 +21,10 @@ function App() {
     }
   }
 
+  const icon = (code) => {
+    return `http://openweathermap.org/img/wn/${code}@2x.png`
+  }
+
   const dateBuilder = (d) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -33,6 +37,8 @@ function App() {
 
     return `${day}, ${date} ${month} ${year}`
   }
+
+  // NOTE: {weather.weather[0].main} gets the primary description for the weather, which is what will be used for changing the background image. {weather.weather[0].description} is the subsection of `main`
 
   return (
     <div className="App">
@@ -49,7 +55,8 @@ function App() {
             </div>
             <div className="weather-box">
               <p className="temp">{Math.round(weather.main.temp)}&#8451;</p>
-              <p className="weather">{weather.weather[0].main}</p>
+              <p className="weather">{weather.weather[0].description}</p>
+              <img className="weather-icon" src={icon(weather.weather[0].icon)} alt=""/>
             </div>
           </article>
         ) : ("")}
