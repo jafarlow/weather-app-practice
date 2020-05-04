@@ -12,7 +12,7 @@ function App() {
 
   const search = event => {
     if (event.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+      fetch(`${api.base}weather?q=${query}&APPID=${api.key}`)
         .then(res => res.json())
         .then(result => {
           setWeather(result)
@@ -24,6 +24,9 @@ function App() {
   const icon = (code) => {
     return `http://openweathermap.org/img/wn/${code}@2x.png`
   }
+
+  const celcius = (temp) => temp - 273.15
+  const fahrenheit = (temp) => ((temp - 273.15) * (9/5) + 32)
 
   const dateBuilder = (d) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -42,11 +45,11 @@ function App() {
 
   return (
     <div className={(typeof weather.main != "undefined")
-      ? ((weather.main.temp > 29)
+      ? ((weather.main.temp > 302)
         ? `App ${weather.weather[0].main}-hot`
-        : (weather.main.temp > 16)
+        : (weather.main.temp > 289)
         ? `App ${weather.weather[0].main}-warm`
-        : (weather.main.temp > 0)
+        : (weather.main.temp > 273)
         ? `App ${weather.weather[0].main}-cool`
         : `App ${weather.weather[0].main}-cold`)
       : 'App default'}>
@@ -62,7 +65,7 @@ function App() {
               <p className="date">{dateBuilder(new Date())}</p>
             </div>
             <div className="weather-box">
-              <p className="temp">{Math.round(weather.main.temp)}&#8451;</p>
+              <p className="temp">{Math.round(celcius(weather.main.temp))}&#8451; | {Math.round(fahrenheit(weather.main.temp))}&#x2109;</p>
               <p className="weather">{weather.weather[0].description}</p>
               <img className="weather-icon" src={icon(weather.weather[0].icon)} alt=""/>
             </div>
