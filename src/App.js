@@ -41,7 +41,15 @@ function App() {
   // NOTE: {weather.weather[0].main} gets the primary description for the weather, which is what will be used for changing the background image. {weather.weather[0].description} is the subsection of `main`
 
   return (
-    <div className="App">
+    <div className={(typeof weather.main != "undefined")
+      ? ((weather.main.temp > 29)
+        ? `App ${weather.weather[0].main}-hot`
+        : (weather.main.temp > 16)
+        ? `App ${weather.weather[0].main}-warm`
+        : (weather.main.temp > 0)
+        ? `App ${weather.weather[0].main}-cool`
+        : `App ${weather.weather[0].main}-cold`)
+      : 'App default'}>
       <main>
         <h1>Check your weather</h1>
         <div className="search">
