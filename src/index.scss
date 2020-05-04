@@ -41,6 +41,11 @@ article {
   border: 0.25rem solid black;
   border-radius: 2rem;
 
+  .weather {
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+
   .temp {
     font-size: 3rem;
     margin-top: 1rem;
