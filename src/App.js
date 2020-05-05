@@ -72,6 +72,9 @@ function App() {
           </article>
         ) : ("")}
       </main>
+      <footer>
+        <p><b>Disclaimer:</b> The source data is limited. If your search does not generate a response, check your spelling or try a different city near your original search location. For cities which exist in multiple countries, use the country code (ie. "Bedford, UK"). If a country has multiple cities by the same name, try including the state/region name (ie. "Arlington, VA, US")</p>
+      </footer>
     </div>
   );
 }
