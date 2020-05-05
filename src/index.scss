@@ -147,7 +147,7 @@ h1 {
   margin-bottom: 2rem;
 
   .searchbar {
-    width: 600px;
+    width: 100%;
     box-sizing: border-box;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -155,10 +155,13 @@ h1 {
 }
 
 article {
-  min-width: 50%;
+  // min-width: 50%;
   max-width: 600px;
   min-height: 20rem;
   margin-top: 0.5rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,7 +172,7 @@ article {
 }
 
 .location-box {
-  margin: 0 1rem;
+  // margin: 0 1rem;
 }
 
 .location {
@@ -225,3 +228,60 @@ footer {
     margin: 0 auto;
   }
 }
+
+@media only screen and (max-width: 780px) {
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .search {
+    max-width: 500px;
+  }
+
+  article {
+    // testing with Sri Jayewardenepura Kotte
+    max-width: 63%;
+
+    border: 0.125rem solid grey;
+  }
+
+  .location {
+    font-size: 1.75rem;
+  }
+
+  .date {
+    font-size: 1.25rem;
+  }
+
+  .weather-box {
+    width: 15rem;
+    margin-bottom: 1.75rem;
+    border: 0.125rem solid black;
+
+    .weather {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    .temp {
+      font-size: 2rem;
+    }
+  }
+
+  footer {
+    p {
+      width: 100vw;
+      padding: 0 1.5rem;
+    }
+  }
+}
+
+// @media only screen and (max-width: 25.9375rem) {
+//   footer {
+//     p {
+//       width: 100vw;
+//       padding: 0 1.5rem;
+//     }
+//   }
+// }
