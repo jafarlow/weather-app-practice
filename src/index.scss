@@ -78,7 +78,11 @@
   @include background-image("./images/hazy-warm.jpg");
 }
 
-.Mist-cold, .Mist-cool {
+.Mist-cold {
+  @include background-image("./images/misty-cold.jpg");
+}
+
+.Mist-cool {
   @include background-image("./images/misty-cool.jpg");
 }
 
