@@ -3,13 +3,21 @@
 .App {
   // negative margin to remove wrapping whitespace
   margin: -0.5rem;
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @mixin background-image($url) {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)), url($url);
+}
+
+@mixin text-shadow($x, $y, $blur, $color) {
+  text-shadow:
+    -#{$x} -#{$y} $blur $color,
+    $x -#{$y} $blur $color,
+    -#{$x} $y $blur $color,
+    $x $y $blur $color,
 }
 
 // variable background images
@@ -113,34 +121,67 @@ main {
   align-items: center;
 }
 
+h1 {
+  font-size: 3rem;
+  @include text-shadow(0.0625rem, 0.0625rem, 0, white);
+}
+
 .search {
-  width: 85%;
+  width: 600px;;
+  margin-bottom: 2rem;
 
   .searchbar {
-    width: 100%;
+    width: 600px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 article {
-  width: 50%;
+  min-width: 50%;
+  max-width: 600px;
+  min-height: 20rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 0.25rem solid grey;
+  border-radius: 2rem;
+}
+
+.location-box {
+  margin: 0 1rem;
 }
 
 .location {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+  @include text-shadow(0.03125rem, 0.03125rem, 0, white);
+}
+
+.date {
   font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.5rem;
+  @include text-shadow(0.03125rem, 0.03125rem, 0, white);
 }
 
 .weather-box {
   width: 22rem;
   text-align: center;
+  margin-bottom: 2rem;
   border: 0.25rem solid black;
   border-radius: 2rem;
   background-color: rgba(255, 255, 255, 0.4);
 
   .weather {
+    font-size: 1.25rem;
     text-transform: capitalize;
     margin-bottom: 0;
   }

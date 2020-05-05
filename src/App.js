@@ -54,7 +54,7 @@ function App() {
         : `App ${weather.weather[0].main}-cold`)
       : 'App default'}>
       <main>
-        <h1>Check your weather</h1>
+        <h1>Current weather conditions</h1>
         <div className="search">
           <input type="text" className="searchbar" onChange={e => setQuery(e.target.value)} value={query} onKeyPress={search}/>
         </div>
