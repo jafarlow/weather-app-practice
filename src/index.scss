@@ -34,7 +34,7 @@
 // NOTE: set tablet as 768 x 1024--anything wider would use desktop
 // NOTE: mobile needs 415 x 900 to cover widest & tallest screens
 // NOTE: no existing simple way to serve these variable sizes up
-//       (srcset is an html setting on an <img> which I'm not using 
+//       (srcset is an html setting on an <img> which I'm not using
 //       here, and image-set has limited browser support)
 
 .default {
@@ -148,7 +148,7 @@ h1 {
 }
 
 .search {
-  width: 600px;;
+  width: 37.5rem;
   margin-bottom: 2rem;
 
   .searchbar {
@@ -161,7 +161,7 @@ h1 {
 
 article {
   // min-width: 50%;
-  max-width: 600px;
+  max-width: 37.5rem;
   min-height: 20rem;
   margin-top: 0.5rem;
   padding: 0 2rem;
@@ -220,14 +220,14 @@ article {
 footer {
   height: 5.5rem;
   margin: 0;
-  border-top: 1px solid grey;
+  border-top: 0.0625rem solid grey;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
 
   p {
-    max-width: 1050px;
+    max-width: 65.625rem;
     text-align: justify;
     color: white;
     margin: 0 auto;
@@ -235,20 +235,19 @@ footer {
   }
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 48.75rem) {
   h1 {
     font-size: 2.5rem;
     margin-top: 3rem;
   }
 
   .search {
-    max-width: 500px;
+    max-width: 31.25rem;
   }
 
   article {
     // testing with Sri Jayewardenepura Kotte
     max-width: 63%;
-
     border: 0.125rem solid grey;
   }
 
@@ -284,7 +283,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 25.9375rem) {
   main {
     // smaller screen means more lines of footer text, so height
     // needs to compensate for that
@@ -329,7 +328,7 @@ footer {
     }
 
     img {
-      width: 75px;
+      width: 4.6875rem;
       height: auto;
     }
   }
