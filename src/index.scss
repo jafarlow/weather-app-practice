@@ -54,114 +54,218 @@
 }
 
 .Clear-cold {
-  @include background-image("./images/sunny-cold.png", "./images/sunny-cold-tab.png", "./images/sunny-cold-mob.png");
+  @include background-image(
+    "./images/sunny-cold.png",
+    "./images/sunny-cold-tab.png",
+    "./images/sunny-cold-mob.png"
+  );
 }
 
 .Clear-cool {
-  @include background-image("./images/sunny-cool.jpg", "./images/sunny-cool-tab.jpg", "./images/sunny-cool-mob.jpg");
+  @include background-image(
+    "./images/sunny-cool.jpg",
+    "./images/sunny-cool-tab.jpg",
+    "./images/sunny-cool-mob.jpg"
+  );
   background-position: top;
 }
 
 .Clear-hot {
-  @include background-image("./images/sunny-hot.jpg", "./images/sunny-hot-tab.jpg", "./images/sunny-hot-mob.jpg");
+  @include background-image(
+    "./images/sunny-hot.jpg",
+    "./images/sunny-hot-tab.jpg",
+    "./images/sunny-hot-mob.jpg"
+  );
   background-position: center;
 }
 
 .Clear-warm {
-  @include background-image("./images/sunny-warm.jpg", "./images/sunny-warm-tab.jpg", "./images/sunny-warm-mob.jpg");
+  @include background-image(
+    "./images/sunny-warm.jpg",
+    "./images/sunny-warm-tab.jpg",
+    "./images/sunny-warm-mob.jpg"
+  );
   background-position: top;
 }
 
 .Clouds-cold {
-  @include background-image("./images/cloudy-cold.jpg", "./images/cloudy-cold-tab.jpg", "./images/cloudy-cold-mob.jpg");
+  @include background-image(
+    "./images/cloudy-cold.jpg",
+    "./images/cloudy-cold-tab.jpg",
+    "./images/cloudy-cold-mob.jpg"
+  );
 }
 
 .Clouds-cool {
-  @include background-image("./images/cloudy-cool.jpg", "./images/cloudy-cool-tab.jpg", "./images/cloudy-cool-mob.jpg");
+  @include background-image(
+    "./images/cloudy-cool.jpg",
+    "./images/cloudy-cool-tab.jpg",
+    "./images/cloudy-cool-mob.jpg"
+  );
   background-position: center;
 }
 
 .Clouds-hot {
-  @include background-image("./images/cloudy-hot.jpg", "./images/cloudy-hot-tab.jpg", "./images/cloudy-hot-mob.jpg");
+  @include background-image(
+    "./images/cloudy-hot.jpg",
+    "./images/cloudy-hot-tab.jpg",
+    "./images/cloudy-hot-mob.jpg"
+  );
 }
 
 .Clouds-warm {
-  @include background-image("./images/cloudy-warm.jpg", "./images/cloudy-warm-tab.jpg", "./images/cloudy-warm-mob.jpg");
+  @include background-image(
+    "./images/cloudy-warm.jpg",
+    "./images/cloudy-warm-tab.jpg",
+    "./images/cloudy-warm-mob.jpg"
+  );
   background-position: center;
 }
 
 .Fog-cold {
-  @include background-image("./images/foggy-cold.jpg", "./images/foggy-cold-tab.jpg", "./images/foggy-cold-mob.jpg");
+  @include background-image(
+    "./images/foggy-cold.jpg",
+    "./images/foggy-cold-tab.jpg",
+    "./images/foggy-cold-mob.jpg"
+  );
 }
 
 .Fog-cool {
-  @include background-image("./images/foggy-cool.jpg", "./images/foggy-cool-tab.jpg", "./images/foggy-cool-mob.jpg");
+  @include background-image(
+    "./images/foggy-cool.jpg",
+    "./images/foggy-cool-tab.jpg",
+    "./images/foggy-cool-mob.jpg"
+  );
 }
 
 .Fog-hot {
   // use misty-hot image
-  @include background-image("./images/misty-hot.jpg", "./images/misty-hot-tab.jpg", "./images/misty-hot-mob.jpg");
+  @include background-image(
+    "./images/misty-hot.jpg",
+    "./images/misty-hot-tab.jpg",
+    "./images/misty-hot-mob.jpg"
+  );
 }
 
 .Fog-warm {
-  @include background-image("./images/foggy-warm.jpg", "./images/foggy-warm-tab.jpg", "./images/foggy-warm-mob.jpg");
+  @include background-image(
+    "./images/foggy-warm.jpg",
+    "./images/foggy-warm-tab.jpg",
+    "./images/foggy-warm-mob.jpg"
+  );
 }
 
 .Haze-cold, .Haze-cool {
-  @include background-image("./images/hazy-cool.jpg", "./images/hazy-cool-tab.jpg", "./images/hazy-cool-mob.jpg");
+  @include background-image(
+    "./images/hazy-cool.jpg",
+    "./images/hazy-cool-tab.jpg",
+    "./images/hazy-cool-mob.jpg"
+  );
 }
 
 .Haze-hot {
-  @include background-image("./images/hazy-hot.jpg", "./images/hazy-hot-tab.jpg", "./images/hazy-hot-mob.jpg");
+  @include background-image(
+    "./images/hazy-hot.jpg",
+    "./images/hazy-hot-tab.jpg",
+    "./images/hazy-hot-mob.jpg"
+  );
 }
 
 .Haze-warm {
-  @include background-image("./images/hazy-warm.jpg", "./images/hazy-warm-tab.jpg", "./images/hazy-warm-mob.jpg");
+  @include background-image(
+    "./images/hazy-warm.jpg",
+    "./images/hazy-warm-tab.jpg",
+    "./images/hazy-warm-mob.jpg"
+  );
 }
 
 .Mist-cold {
-  @include background-image("./images/misty-cold.jpg", "./images/misty-cold-tab.jpg", "./images/misty-cold-mob.jpg");
+  @include background-image(
+    "./images/misty-cold.jpg",
+    "./images/misty-cold-tab.jpg",
+    "./images/misty-cold-mob.jpg"
+  );
 }
 
 .Mist-cool {
-  @include background-image("./images/misty-cool.jpg", "./images/misty-cool-tab.jpg", "./images/misty-cool-mob.jpg");
+  @include background-image(
+    "./images/misty-cool.jpg",
+    "./images/misty-cool-tab.jpg",
+    "./images/misty-cool-mob.jpg"
+  );
 }
 
 .Mist-hot {
-  @include background-image("./images/misty-hot.jpg", "./images/misty-hot-tab.jpg", "./images/misty-hot-mob.jpg");
+  @include background-image(
+    "./images/misty-hot.jpg",
+    "./images/misty-hot-tab.jpg",
+    "./images/misty-hot-mob.jpg"
+  );
 }
 
 .Mist-warm {
-  @include background-image("./images/misty-warm.jpg", "./images/misty-warm-tab.jpg", "./images/misty-warm-mob.jpg");
+  @include background-image(
+    "./images/misty-warm.jpg",
+    "./images/misty-warm-tab.jpg",
+    "./images/misty-warm-mob.jpg"
+  );
 }
 
 .Rain-cold, .Drizzle-cold {
-  @include background-image("./images/rainy-cold.jpg", "./images/rainy-cold-tab.jpg", "./images/rainy-cold-mob.jpg");
+  @include background-image(
+    "./images/rainy-cold.jpg",
+    "./images/rainy-cold-tab.jpg",
+    "./images/rainy-cold-mob.jpg"
+  );
 }
 
 .Rain-cool, .Drizzle-cool {
-  @include background-image("./images/rainy-cool.jpg", "./images/rainy-cool-tab.jpg", "./images/rainy-cool-mob.jpg");
+  @include background-image(
+    "./images/rainy-cool.jpg",
+    "./images/rainy-cool-tab.jpg",
+    "./images/rainy-cool-mob.jpg"
+  );
 }
 
 .Rain-warm, .Drizzle-warm, .Rain-hot, .Drizzle-hot {
-  @include background-image("./images/rainy-warm.jpg", "./images/rainy-warm-tab.jpg", "./images/rainy-warm-mob.jpg");
+  @include background-image(
+    "./images/rainy-warm.jpg",
+    "./images/rainy-warm-tab.jpg",
+    "./images/rainy-warm-mob.jpg"
+  );
   background-position: left center;
 }
 
 .Snow-cold {
-  @include background-image("./images/snowy-cold.jpg", "./images/snowy-cold-tab.jpg", "./images/snowy-cold-mob.jpg");
+  @include background-image(
+    "./images/snowy-cold.jpg",
+    "./images/snowy-cold-tab.jpg",
+    "./images/snowy-cold-mob.jpg"
+  );
 }
 
 .Snow-cool {
-  @include background-image("./images/snowy-cool.jpg", "./images/snowy-cool-tab.jpg", "./images/snowy-cool-mob.jpg");
+  @include background-image(
+    "./images/snowy-cool.jpg",
+    "./images/snowy-cool-tab.jpg",
+    "./images/snowy-cool-mob.jpg"
+  );
 }
 
 .Thunderstorm-hot {
-  @include background-image("./images/thunderstorm-hot.jpg", "./images/thunderstorm-hot-tab.jpg", "./images/thunderstorm-hot-mob.jpg");
+  @include background-image(
+    "./images/thunderstorm-hot.jpg",
+    "./images/thunderstorm-hot-tab.jpg",
+    "./images/thunderstorm-hot-mob.jpg"
+  );
 }
 
 .Thunderstorm-warm {
-  @include background-image("./images/thunderstorm-warm.jpg", "./images/thunderstorm-warm-tab.jpg", "./images/thunderstorm-warm-mob.jpg");
+  @include background-image(
+    "./images/thunderstorm-warm.jpg",
+    "./images/thunderstorm-warm-tab.jpg",
+    "./images/thunderstorm-warm-mob.jpg"
+  );
 }
 
 // primary CSS
