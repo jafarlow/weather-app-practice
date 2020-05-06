@@ -16,6 +16,7 @@
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
 }
 
 @mixin background-image($url) {
@@ -31,7 +32,7 @@
 }
 
 // variable background images
-// NOTE: set tablet as 768 x 1024--anything wider would use desktop
+// NOTE: set tablet as 780 x 1024--anything wider would use desktop
 // NOTE: mobile needs 415 x 900 to cover widest & tallest screens
 // NOTE: no existing simple way to serve these variable sizes up
 //       (srcset is an html setting on an <img> which I'm not using
@@ -47,14 +48,23 @@
 
 .Clear-cool {
   @include background-image("./images/sunny-cool.jpg");
+  background-position: top;
 }
 
 .Clear-hot {
   @include background-image("./images/sunny-hot.jpg");
+  background-position: center;
 }
 
 .Clear-warm {
   @include background-image("./images/sunny-warm.jpg");
+  background-position: top;
+  @media only screen and (max-width: 48.75rem) {
+      @include background-image("./images/sunny-warm-tab.jpg");
+  }
+  @media only screen and (max-width: 25.9375rem) {
+      @include background-image("./images/sunny-warm-mob.jpg");
+  }
 }
 
 .Clouds-cold {
@@ -63,6 +73,7 @@
 
 .Clouds-cool {
   @include background-image("./images/cloudy-cool.jpg");
+  background-position: center;
 }
 
 .Clouds-hot {
@@ -71,10 +82,26 @@
 
 .Clouds-warm {
   @include background-image("./images/cloudy-warm.jpg");
+  background-position: center;
 }
 
-.Fog-cold, .Fog-cool {
+.Fog-cold {
   @include background-image("./images/foggy-cold.jpg");
+}
+
+.Fog-cool {
+  @include background-image("./images/foggy-cool.jpg");
+  @media only screen and (max-width: 48.75rem) {
+      @include background-image("./images/foggy-cool-tab.jpg");
+  }
+  @media only screen and (max-width: 25.9375rem) {
+      @include background-image("./images/foggy-cool-mob.jpg");
+  }
+}
+
+.Fog-hot {
+  // use misty-hot image
+  @include background-image("./images/misty-hot.jpg");
 }
 
 .Fog-warm {
@@ -101,7 +128,11 @@
   @include background-image("./images/misty-cool.jpg");
 }
 
-.Mist-warm, .Mist-hot {
+.Mist-hot {
+  @include background-image("./images/misty-hot.jpg");
+}
+
+.Mist-warm{
   @include background-image("./images/misty-warm.jpg");
 }
 
@@ -121,14 +152,31 @@
 
 .Rain-warm, .Drizzle-warm, .Rain-hot, .Drizzle-hot {
   @include background-image("./images/rainy-warm.jpg");
+  background-position: left center;
 }
 
-.Snow-cold, .Snow-cool {
-  @include background-image("./images/snowy.jpg");
+.Snow-cold {
+  @include background-image("./images/snowy-cold.jpg");
+}
+
+.Snow-cool {
+  @include background-image("./images/snowy-cool.jpg");
+  @media only screen and (max-width: 48.75rem) {
+      @include background-image("./images/snowy-cool-tab.jpg");
+  }
+  @media only screen and (max-width: 25.9375rem) {
+      @include background-image("./images/snowy-cool-mob.jpg");
+  }
 }
 
 .Thunderstorm-hot {
   @include background-image("./images/thunderstorm-hot.jpg");
+  @media only screen and (max-width: 48.75rem) {
+      @include background-image("./images/thunderstorm-hot-tab.jpg");
+  }
+  @media only screen and (max-width: 25.9375rem) {
+      @include background-image("./images/thunderstorm-hot-mob.jpg");
+  }
 }
 
 .Thunderstorm-warm {
@@ -139,7 +187,6 @@
   @media only screen and (max-width: 25.9375rem) {
       @include background-image("./images/thunderstorm-warm-mob.jpg");
   }
-
 }
 
 // primary CSS
