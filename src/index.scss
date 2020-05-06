@@ -31,6 +31,11 @@
 }
 
 // variable background images
+// NOTE: set tablet as 768 x 1024--anything wider would use desktop
+// NOTE: mobile needs 415 x 900 to cover widest & tallest screens
+// NOTE: no existing simple way to serve these variable sizes up
+//       (srcset is an html setting on an <img> which I'm not using 
+//       here, and image-set has limited browser support)
 
 .default {
   @include background-image("./images/default.jpg");
@@ -128,7 +133,7 @@
 
 main {
   max-width: 50.25rem;
-  height: calc(100vh - 7.5rem);
+  height: calc(100vh - 5.5rem);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -172,10 +177,6 @@ article {
   border-radius: 2rem;
 }
 
-.location-box {
-  // margin: 0 1rem;
-}
-
 .location {
   font-size: 2rem;
   font-weight: bold;
@@ -217,7 +218,7 @@ article {
 }
 
 footer {
-  height: 7.5rem;
+  height: 5.5rem;
   margin: 0;
   border-top: 1px solid grey;
   box-sizing: border-box;
@@ -226,10 +227,11 @@ footer {
   background-color: rgba(0, 0, 0, 0.4);
 
   p {
-    max-width: 850px;
+    max-width: 1050px;
     text-align: justify;
     color: white;
     margin: 0 auto;
+    padding: 0 1.5rem;
   }
 }
 
@@ -275,13 +277,20 @@ footer {
 
   footer {
     p {
+      font-size: 0.9rem;
       width: 100vw;
-      padding: 0 1.5rem;
+      padding: 0 1.25rem;
     }
   }
 }
 
 @media only screen and (max-width: 415px) {
+  main {
+    // smaller screen means more lines of footer text, so height
+    // needs to compensate for that
+    height: calc(100vh - 7rem);
+  }
+
   h1 {
     font-size: 2em;
     text-align: center;
@@ -293,7 +302,8 @@ footer {
     margin-bottom: 1rem;
 
     .searchbar {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
+      line-height: 1.5rem;
       margin: 0 auto;
     }
   }
@@ -325,9 +335,10 @@ footer {
   }
 
   footer {
+    height: 7rem;
+
     p {
       font-size: 0.75rem;
-      padding: 0 1.25rem;
     }
   }
 }
