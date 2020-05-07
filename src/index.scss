@@ -456,18 +456,12 @@ footer {
 }
 
 @media only screen and (max-width: 25.9375rem) {
-  // main {
-  //   // smaller screen means more lines of footer text, so height
-  //   // needs to compensate for that
-  //   // height: calc(100vh - 7rem);
-  //   position: relative;
-  // }
-
   h1 {
     font-size: 2em;
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1.25rem;
+    @include text-shadow(0.0625rem, 0.0625rem, 0, black);
   }
 
   .search {
@@ -517,16 +511,29 @@ footer {
     }
   }
 
+  // NOTE: this is for when the keyboard slides out on an Android device -- unsure yet if iOS is affected in the same way
   @media only screen and (max-height: 515px) {
     article {
-      min-height: 12rem;
+      min-height: 9rem;
     }
+
+    .location {
+      margin-top: 0.75rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .date {
+      display: none;
+    }
+
     .weather-box {
       padding-bottom: 1rem;
+
       img {
         display: none;
       }
     }
+
     footer {
       display: none;
     }
