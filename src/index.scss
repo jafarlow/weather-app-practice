@@ -71,6 +71,12 @@
     "./images/sunny-cold-tab.png",
     "./images/sunny-cold-mob.png"
   );
+  .weather-box {
+    img {
+      background-color: unset;
+      margin: 0;
+    }
+  }
 }
 
 .Clear-cool {
@@ -80,6 +86,12 @@
     "./images/sunny-cool-mob.jpg"
   );
   background-position: top;
+  .weather-box {
+    img {
+      background-color: unset;
+      margin: 0;
+    }
+  }
 }
 
 .Clear-hot {
@@ -89,6 +101,12 @@
     "./images/sunny-hot-mob.jpg"
   );
   background-position: center;
+  .weather-box {
+    img {
+      background-color: unset;
+      margin: 0;
+    }
+  }
 }
 
 .Clear-warm {
@@ -100,7 +118,10 @@
   background-position: top;
 
   .weather-box {
-    background-color: rgba(100, 100, 100, 0.5);
+    img {
+      background-color: unset;
+      margin: 0;
+    }
   }
 }
 
@@ -185,7 +206,7 @@
     "./images/hazy-hot-tab.jpg",
     "./images/hazy-hot-mob.jpg"
   );
-  @include haze-weather-change();
+  // @include haze-weather-change();
 }
 
 .Haze-warm {
@@ -194,7 +215,7 @@
     "./images/hazy-warm-tab.jpg",
     "./images/hazy-warm-mob.jpg"
   );
-  @include haze-weather-change();
+  // @include haze-weather-change();
 }
 
 .Mist-cold {
@@ -244,12 +265,12 @@
     "./images/rainy-cool-mob.jpg"
   );
 
-  .weather-box {
-    background-color: rgba(205, 224, 157, 0.5);
-    .weather {
-      font-size: 1.5rem;
-    }
-  }
+  // .weather-box {
+  //   background-color: rgba(205, 224, 157, 0.5);
+  //   .weather {
+  //     font-size: 1.5rem;
+  //   }
+  // }
 }
 
 .Rain-warm, .Drizzle-warm, .Rain-hot, .Drizzle-hot {
@@ -369,7 +390,7 @@ article {
   // background-color: rgba(100, 100, 100, 0.5);
   background-color: white;
   color: black;
-  opacity: 50%;
+  opacity: 60%;
 
   .weather {
     font-size: 1.25rem;
@@ -383,6 +404,12 @@ article {
     margin-top: 1rem;
     margin-bottom: 1rem;
     // @include text-shadow(0.03125rem, 0.03125rem, 0, black);
+  }
+
+  img {
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    margin: 0.5rem 0;
   }
 }
 
