@@ -88,7 +88,7 @@
     "./images/sunny-hot-tab.jpg",
     "./images/sunny-hot-mob.jpg"
   );
-  background-position: center;
+  background-position: top right;
   @include clear-weather-change();
 }
 
@@ -299,6 +299,18 @@ h1 {
   font-size: 3rem;
   color: white;
   @include text-shadow(0.125rem, 0.125rem, 0, black);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
 
 .search {
