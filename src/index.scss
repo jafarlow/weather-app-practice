@@ -206,7 +206,6 @@
     "./images/hazy-hot-tab.jpg",
     "./images/hazy-hot-mob.jpg"
   );
-  // @include haze-weather-change();
 }
 
 .Haze-warm {
@@ -215,7 +214,6 @@
     "./images/hazy-warm-tab.jpg",
     "./images/hazy-warm-mob.jpg"
   );
-  // @include haze-weather-change();
 }
 
 .Mist-cold {
@@ -264,13 +262,6 @@
     "./images/rainy-cool-tab.jpg",
     "./images/rainy-cool-mob.jpg"
   );
-
-  // .weather-box {
-  //   background-color: rgba(205, 224, 157, 0.5);
-  //   .weather {
-  //     font-size: 1.5rem;
-  //   }
-  // }
 }
 
 .Rain-warm, .Drizzle-warm, .Rain-hot, .Drizzle-hot {
@@ -346,7 +337,6 @@ h1 {
 }
 
 article {
-  // min-width: 50%;
   max-width: 37.5rem;
   min-height: 20rem;
   margin-top: 0.5rem;
@@ -386,8 +376,6 @@ article {
   margin-bottom: 2rem;
   border: 0.25rem solid black;
   border-radius: 2rem;
-  // background-color: rgba(255, 255, 255, 0.4);
-  // background-color: rgba(100, 100, 100, 0.5);
   background-color: white;
   color: black;
   opacity: 60%;
@@ -396,14 +384,12 @@ article {
     font-size: 1.25rem;
     text-transform: capitalize;
     margin-bottom: 0;
-    // @include text-shadow(0.03125rem, 0.03125rem, 0, black);
   }
 
   .temp {
     font-size: 3rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    // @include text-shadow(0.03125rem, 0.03125rem, 0, black);
   }
 
   img {
