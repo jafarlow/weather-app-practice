@@ -459,14 +459,15 @@ footer {
   // main {
   //   // smaller screen means more lines of footer text, so height
   //   // needs to compensate for that
-  //   height: calc(100vh - 7rem);
+  //   // height: calc(100vh - 7rem);
+  //   position: relative;
   // }
 
   h1 {
     font-size: 2em;
     text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 1.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
   }
 
   .search {
@@ -496,12 +497,14 @@ footer {
   }
 
   .weather-box {
+    margin-bottom: 1.5rem;
     .temp {
       font-size: 1.5rem;
+      margin-bottom: 0;
     }
 
     img {
-      width: 4.6875rem;
+      width: 3.75rem;
       height: auto;
     }
   }
@@ -511,6 +514,21 @@ footer {
 
     p {
       font-size: 0.75rem;
+    }
+  }
+
+  @media only screen and (max-height: 515px) {
+    article {
+      min-height: 12rem;
+    }
+    .weather-box {
+      padding-bottom: 1rem;
+      img {
+        display: none;
+      }
+    }
+    footer {
+      display: none;
     }
   }
 }
