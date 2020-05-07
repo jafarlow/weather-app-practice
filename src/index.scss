@@ -38,13 +38,11 @@
     $x $y $blur $color,
 }
 
-@mixin haze-weather-change() {
+@mixin clear-weather-change() {
   .weather-box {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
-    font-weight: bold;
-    .weather, .temp {
-      @include text-shadow(0.03125rem, 0.03125rem, 0, white);
+    img {
+      background-color: unset;
+      margin: 0;
     }
   }
 }
@@ -71,12 +69,7 @@
     "./images/sunny-cold-tab.png",
     "./images/sunny-cold-mob.png"
   );
-  .weather-box {
-    img {
-      background-color: unset;
-      margin: 0;
-    }
-  }
+  @include clear-weather-change();
 }
 
 .Clear-cool {
@@ -86,12 +79,7 @@
     "./images/sunny-cool-mob.jpg"
   );
   background-position: top;
-  .weather-box {
-    img {
-      background-color: unset;
-      margin: 0;
-    }
-  }
+  @include clear-weather-change();
 }
 
 .Clear-hot {
@@ -101,12 +89,7 @@
     "./images/sunny-hot-mob.jpg"
   );
   background-position: center;
-  .weather-box {
-    img {
-      background-color: unset;
-      margin: 0;
-    }
-  }
+  @include clear-weather-change();
 }
 
 .Clear-warm {
@@ -116,13 +99,7 @@
     "./images/sunny-warm-mob.jpg"
   );
   background-position: top;
-
-  .weather-box {
-    img {
-      background-color: unset;
-      margin: 0;
-    }
-  }
+  @include clear-weather-change();
 }
 
 .Clouds-cold {
