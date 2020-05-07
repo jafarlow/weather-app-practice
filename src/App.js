@@ -56,7 +56,8 @@ function App() {
       <main>
         <h1>Current weather conditions</h1>
         <div className="search">
-          <input type="text" className="searchbar" onChange={e => setQuery(e.target.value)} value={query} onKeyPress={search}/>
+          <label for="searching" class="sr-only">Use the input field below to search for a city. If nothing renders, please check the disclaimer in the footer and try again.</label>
+          <input type="text" className="searchbar" id="searching" onChange={e => setQuery(e.target.value)} value={query} onKeyPress={search}/>
         </div>
         {(typeof weather.main != "undefined") ? (
           <article>
