@@ -12,6 +12,7 @@ function App() {
 
   const search = event => {
     if (event.key === "Enter") {
+      event.target.blur()
       fetch(`${api.base}weather?q=${query}&APPID=${api.key}`)
         .then(res => res.json())
         .then(result => {
