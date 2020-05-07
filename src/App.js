@@ -23,7 +23,7 @@ function App() {
   }
 
   const icon = (code) => {
-    return `http://openweathermap.org/img/wn/${code}@2x.png`
+    return `https://openweathermap.org/img/wn/${code}@2x.png`
   }
 
   const celcius = (temp) => temp - 273.15
