@@ -38,6 +38,17 @@
     $x $y $blur $color,
 }
 
+@mixin haze-weather-change() {
+  .weather-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-weight: bold;
+    .weather, .temp {
+      @include text-shadow(0.03125rem, 0.03125rem, 0, white);
+    }
+  }
+}
+
 // variable background images
 // NOTE: set tablet as 780 x 1024--anything wider would use desktop
 // NOTE: mobile needs 415 x 900 to cover widest & tallest screens
@@ -51,6 +62,7 @@
     "./images/default-tab.jpg",
     "./images/default-mob.jpg"
   );
+  background-position: center;
 }
 
 .Clear-cold {
@@ -86,6 +98,10 @@
     "./images/sunny-warm-mob.jpg"
   );
   background-position: top;
+
+  .weather-box {
+    background-color: rgba(100, 100, 100, 0.5);
+  }
 }
 
 .Clouds-cold {
@@ -169,6 +185,7 @@
     "./images/hazy-hot-tab.jpg",
     "./images/hazy-hot-mob.jpg"
   );
+  @include haze-weather-change();
 }
 
 .Haze-warm {
@@ -177,6 +194,7 @@
     "./images/hazy-warm-tab.jpg",
     "./images/hazy-warm-mob.jpg"
   );
+  @include haze-weather-change();
 }
 
 .Mist-cold {
@@ -225,6 +243,13 @@
     "./images/rainy-cool-tab.jpg",
     "./images/rainy-cool-mob.jpg"
   );
+
+  .weather-box {
+    background-color: rgba(205, 224, 157, 0.5);
+    .weather {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .Rain-warm, .Drizzle-warm, .Rain-hot, .Drizzle-hot {
@@ -283,7 +308,8 @@ h1 {
   margin-top: 4.5rem;
   margin-bottom: 3rem;
   font-size: 3rem;
-  @include text-shadow(0.0625rem, 0.0625rem, 0, white);
+  color: white;
+  @include text-shadow(0.125rem, 0.125rem, 0, black);
 }
 
 .search {
@@ -339,20 +365,24 @@ article {
   margin-bottom: 2rem;
   border: 0.25rem solid black;
   border-radius: 2rem;
-  background-color: rgba(255, 255, 255, 0.4);
+  // background-color: rgba(255, 255, 255, 0.4);
+  // background-color: rgba(100, 100, 100, 0.5);
+  background-color: white;
+  color: black;
+  opacity: 50%;
 
   .weather {
     font-size: 1.25rem;
     text-transform: capitalize;
     margin-bottom: 0;
-    @include text-shadow(0.03125rem, 0.03125rem, 0, black);
+    // @include text-shadow(0.03125rem, 0.03125rem, 0, black);
   }
 
   .temp {
     font-size: 3rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    @include text-shadow(0.03125rem, 0.03125rem, 0, black);
+    // @include text-shadow(0.03125rem, 0.03125rem, 0, black);
   }
 }
 
