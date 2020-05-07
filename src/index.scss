@@ -286,7 +286,7 @@
 
 main {
   max-width: 50.25rem;
-  height: calc(100vh - 5.5rem);
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -396,6 +396,8 @@ footer {
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
 
   p {
     max-width: 65.625rem;
@@ -447,18 +449,18 @@ footer {
   footer {
     p {
       font-size: 0.9rem;
-      width: 100vw;
+      // width: 100vw;
       padding: 0 1.25rem;
     }
   }
 }
 
 @media only screen and (max-width: 25.9375rem) {
-  main {
-    // smaller screen means more lines of footer text, so height
-    // needs to compensate for that
-    height: calc(100vh - 7rem);
-  }
+  // main {
+  //   // smaller screen means more lines of footer text, so height
+  //   // needs to compensate for that
+  //   height: calc(100vh - 7rem);
+  // }
 
   h1 {
     font-size: 2em;
