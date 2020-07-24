@@ -29,6 +29,10 @@ function App() {
   const celcius = (temp) => temp - 273.15
   const fahrenheit = (temp) => ((temp - 273.15) * (9/5) + 32)
 
+  // NOTE: default wind speed is in meters/second
+  // convert m/s to mph (speed x 2.237)
+  const windSpeed = (speed) => speed * 2.237
+
   const dateBuilder = (d) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -57,7 +61,7 @@ function App() {
       <main>
         <h1>Current weather conditions</h1>
         <div className="search">
-          <label for="searching" class="sr-only">Use the input field below to search for a city. If nothing renders, please check the disclaimer in the footer and try again.</label>
+          <label htmlFor="searching" className="sr-only">Use the input field below to search for a city. If nothing renders, please check the disclaimer in the footer and try again.</label>
           <input type="text" className="searchbar" id="searching" onChange={e => setQuery(e.target.value)} value={query} onKeyPress={search}/>
         </div>
         {(typeof weather.main != "undefined") ? (
@@ -70,6 +74,7 @@ function App() {
               <p className="temp">{Math.round(celcius(weather.main.temp))}&#8451; | {Math.round(fahrenheit(weather.main.temp))}&#x2109;</p>
               <p className="weather">{weather.weather[0].description}</p>
               <img className="weather-icon" src={icon(weather.weather[0].icon)} alt=""/>
+              <p className="wind">Wind: {Math.round(windSpeed(weather.wind.speed))}mph</p>
             </div>
           </article>
         ) : ("")}
