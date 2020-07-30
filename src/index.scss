@@ -47,6 +47,14 @@
   }
 }
 
+@mixin visuallyhidden() {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
 // variable background images
 // NOTE: set tablet as 780 x 1024--anything wider would use desktop
 // NOTE: mobile needs 415 x 900 to cover widest & tallest screens
@@ -529,22 +537,19 @@ footer {
     }
 
     .date {
-      display: none;
+      @include visuallyhidden();
     }
 
     .weather-box {
       padding-bottom: 1rem;
 
-      img {
-        display: none;
-      }
-      .wind {
-        margin-bottom: 0;
+      img, .wind {
+        @include visuallyhidden();
       }
     }
 
     footer {
-      display: none;
+      @include visuallyhidden();
     }
   }
 }
