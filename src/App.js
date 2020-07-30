@@ -18,6 +18,7 @@ function App() {
         .then(result => {
           setWeather(result)
           setQuery('')
+          console.log(result);
         })
     }
   }
@@ -74,7 +75,15 @@ function App() {
               <p className="temp">{Math.round(celcius(weather.main.temp))}&#8451; | {Math.round(fahrenheit(weather.main.temp))}&#x2109;</p>
               <p className="weather">{weather.weather[0].description}</p>
               <img className="weather-icon" src={icon(weather.weather[0].icon)} alt=""/>
-              <p className="wind">Wind: {Math.round(windSpeed(weather.wind.speed))}mph</p>
+              <p className="wind">
+                Wind: {Math.round(windSpeed(weather.wind.speed))}mph
+                <br/>
+                {
+                  weather.wind.gust ? 
+                  `Gust: ${Math.round(windSpeed(weather.wind.gust))}mph`
+                  : null
+                }
+              </p>
             </div>
           </article>
         ) : ("")}
