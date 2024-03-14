@@ -11,6 +11,9 @@
     "react-dom": "^16.13.1",
     "react-scripts": "^5.0.0"
   },
+  "dependenciesComments": {
+    "react-scripts": "'npm audit fix --force' attempting to fix related vulnerabilities will revert to version 3.0.1 with is BAD. DO NOT DO IT"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
